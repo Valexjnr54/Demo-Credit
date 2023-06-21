@@ -7,7 +7,7 @@ describe('Wallet Service', () => {
   beforeAll(async () => {
     // Perform login request and store the token for subsequent requests
     const response = await request(app).post('/login').send({
-      email: 'test@example.com',
+      username: 'test',
       password: 'password123',
     });
 

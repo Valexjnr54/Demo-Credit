@@ -19,7 +19,7 @@ describe('Wallet Service', () => {
     beforeAll(() => __awaiter(void 0, void 0, void 0, function* () {
         // Perform login request and store the token for subsequent requests
         const response = yield (0, supertest_1.default)(app_1.default).post('/login').send({
-            email: 'test@example.com',
+            username: 'test',
             password: 'password123',
         });
         token = response.body.token;
