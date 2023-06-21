@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "2c4bfcc5-e917-4f7b-8ae2-b3c64f4b19c2",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3816988",
+		"_collection_link": "https://www.postman.com/cloudy-equinox-900529/workspace/demo-credit/collection/3816988-2c4bfcc5-e917-4f7b-8ae2-b3c64f4b19c2?action=share&creator=3816988&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "fund wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJqaW12YWxleDU0QGdtYWlsLmNvbSIsImlhdCI6MTY4NzI2ODk3M30.P56N17wSj67shtTY4cK8c7H-1xv2sYu4ukJ0IprHqHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":6000,\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/api/wallet/fund",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"fund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Funds",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJqaW12YWxleDU0QGdtYWlsLmNvbSIsImlhdCI6MTY4NzI2ODk3M30.P56N17wSj67shtTY4cK8c7H-1xv2sYu4ukJ0IprHqHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senderId\":1,\r\n    \"amount\":2000,\r\n    \"recipientEmail\":\"jimvalex544@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/api/wallet/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw Funds",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJqaW12YWxleDU0QGdtYWlsLmNvbSIsImlhdCI6MTY4NzI2ODk3M30.P56N17wSj67shtTY4cK8c7H-1xv2sYu4ukJ0IprHqHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senderId\":1,\r\n    \"amount\":2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/api/wallet/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
